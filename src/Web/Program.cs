@@ -48,6 +48,7 @@ builder.Services.AddCoreServices(builder.Configuration);
 builder.Services.AddWebServices(builder.Configuration);
 
 // Add memory cache services
+// linha adicionada
 builder.Services.AddMemoryCache();
 builder.Services.AddRouting(options =>
 {
