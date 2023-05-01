@@ -1,11 +1,13 @@
 #NAME THE PIPELINE SAME AS FILE (WITHOUT ".yml")
 # trigger:
 # - main
-
-resources:
-  repositories:
-    - repository: self
-      trigger: none
+trigger:
+   branches:
+     include:
+     - main
+   paths:
+     include:
+     - src/web/*
 
 stages:
 - stage: Build
