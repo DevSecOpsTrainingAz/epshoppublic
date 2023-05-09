@@ -6,10 +6,10 @@ resources:
       trigger: none
 
 variables:
-  azureServiceConnection: 'azure-connection'
-  subscriptionId: 'YOUR-SUBSCRIPTION-ID'
+  azureServiceConnection: 'azure-connection-CICD'
+  subscriptionId: '7f62f0c4-db44-4d69-9eb0-c8f6f50718d9'
   resourceGroup: 'rg-az400-container-NAME'
-  location: 'westeurope'
+  location: 'eastus'
 
 stages:
 - stage: Build
