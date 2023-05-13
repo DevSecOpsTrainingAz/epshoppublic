@@ -72,5 +72,5 @@ stages:
         ConnectionType: 'AzureRM'
         azureSubscription: 'terraformteste'
         appType: 'webApp'
-        WebAppName: 'eshoponWebYAML369825031'
+        WebAppName: 'eshoponWebYAML110723581'
         packageForLinux: '$(Build.ArtifactStagingDirectory)/**/Web.zip'
