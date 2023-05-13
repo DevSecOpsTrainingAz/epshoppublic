@@ -60,7 +60,7 @@ stages:
   displayName: Deploy to an Azure Web App
   jobs:
   - deployment: Deploy
-    environment: Prod ## Quando usamos env, job deixa de existir e substituido por deployment.
+    environment: AWS - Prod ## Quando usamos env, job deixa de existir e substituido por deployment.
     
     pool:
       vmImage: 'windows-2019'
