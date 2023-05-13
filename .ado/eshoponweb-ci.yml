@@ -8,6 +8,7 @@ resources:
       trigger: none
 
 stages:
+
 - stage: Build
   displayName: Build .Net Core Solution
   jobs:
@@ -53,27 +54,23 @@ stages:
         PathtoPublish: '$(Build.SourcesDirectory)/.azure/bicep/webapp.bicep'
         ArtifactName: 'Bicep'
         publishLocation: 'Container'
-
 - stage: Deploy
-  displayName: Deploy para Azure Web App
+  displayName: Deploy to an Azure Web App
   jobs:
   - job: Deploy
     pool:
-       vmImage: 'windows-2019'
+      vmImage: 'windows-2019'
     steps:
-    - task: DownloadBuildArtifacts@0
-      inputs:
-       buildType: 'current'
-       downloadType: 'single'
-       artifactName: 'website'
-       downloadPath: '$(Build.ArtifactStagingDirectory)'
     - task: AzureRmWebAppDeployment@4
       inputs:
         ConnectionType: 'AzureRM'
-        azureSubscription: '7f62f0c4-db44-4d69-9eb0-c8f6f50718d9'
+        azureSubscription: 'AZURE SUBSCRIPTION HERE (b999999abc-1234-987a-a1e0-27fb2ea7f9f4)'
         appType: 'webApp'
-        WebAppName: 'eshoponWebYAML110723581'
+        WebAppName: 'eshoponWebYAML369825031'
         packageForLinux: '$(Build.ArtifactStagingDirectory)/**/Web.zip'
-
-
-  
+    - task: DownloadBuildArtifacts@0
+      inputs:
+        buildType: 'current'
+        downloadType: 'single'
+        artifactName: 'Website'
+        downloadPath: '$(Build.ArtifactStagingDirectory)'
