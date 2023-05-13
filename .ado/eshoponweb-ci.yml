@@ -64,7 +64,7 @@ stages:
     - task: AzureRmWebAppDeployment@4
       inputs:
         ConnectionType: 'AzureRM'
-        azureSubscription: '7f62f0c4-db44-4d69-9eb0-c8f6f50718d9'
+        azureSubscription: 'terraformteste'
         appType: 'webApp'
         WebAppName: 'eshoponWebYAML369825031'
         packageForLinux: '$(Build.ArtifactStagingDirectory)/**/Web.zip'
