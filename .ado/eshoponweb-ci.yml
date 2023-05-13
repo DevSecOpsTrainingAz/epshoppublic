@@ -54,23 +54,30 @@ stages:
         PathtoPublish: '$(Build.SourcesDirectory)/.azure/bicep/webapp.bicep'
         ArtifactName: 'Bicep'
         publishLocation: 'Container'
+
+
 - stage: Deploy
   displayName: Deploy to an Azure Web App
   jobs:
-  - job: Deploy
+  - deployment: Deploy
+    environment: Prod ## Quando usamos env, job deixa de existir e substituido por deployment.
+    
     pool:
       vmImage: 'windows-2019'
-    steps:
-    - task: DownloadBuildArtifacts@0
-      inputs:
-        buildType: 'current'
-        downloadType: 'single'
-        artifactName: 'Website'
-        downloadPath: '$(Build.ArtifactStagingDirectory)'
-    - task: AzureRmWebAppDeployment@4
-      inputs:
-        ConnectionType: 'AzureRM'
-        azureSubscription: 'terraformteste'
-        appType: 'webApp'
-        WebAppName: 'eshoponWebYAML110723581'
-        packageForLinux: '$(Build.ArtifactStagingDirectory)/**/Web.zip'
+    strategy:
+     runOnce:
+       deploy:
+          steps: ## Steps também deve ser movido para essa posição mais abaixo depois de deploy..
+          - task: DownloadBuildArtifacts@0
+            inputs:
+              buildType: 'current'
+              downloadType: 'single'
+              artifactName: 'Website'
+              downloadPath: '$(Build.ArtifactStagingDirectory)'
+          - task: AzureRmWebAppDeployment@4
+            inputs:
+              ConnectionType: 'AzureRM'
+              azureSubscription: 'terraformteste'
+              appType: 'webApp'
+              WebAppName: 'eshoponWebYAML110723581'
+              packageForLinux: '$(Build.ArtifactStagingDirectory)/**/Web.zip'
