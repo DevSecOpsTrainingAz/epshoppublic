@@ -64,7 +64,7 @@ stages:
     - task: AzureRmWebAppDeployment@4
       inputs:
         ConnectionType: 'AzureRM'
-        azureSubscription: 'AZURE SUBSCRIPTION HERE (b999999abc-1234-987a-a1e0-27fb2ea7f9f4)'
+        azureSubscription: '7f62f0c4-db44-4d69-9eb0-c8f6f50718d9'
         appType: 'webApp'
         WebAppName: 'eshoponWebYAML369825031'
         packageForLinux: '$(Build.ArtifactStagingDirectory)/**/Web.zip'
