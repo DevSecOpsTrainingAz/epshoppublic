@@ -15,10 +15,10 @@ resources:
 variables:
   tag: '$(Build.BuildId)'
   resource-group: 'AZ400-EWebShop-NAME'
-  location: 'westeurope'
+  location: 'eastus'
   templateFile: '.azure/bicep/acr.bicep'
-  azureserviceconnection: 'azure subs'
-  subscriptionId: 'YOUR-SUBSCRIPTION-ID'
+  azureserviceconnection: 'terraformteste'
+  subscriptionId: '7f62f0c4-db44-4d69-9eb0-c8f6f50718d9'
 
 stages:
 - stage: Build
