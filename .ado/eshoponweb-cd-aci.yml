@@ -15,7 +15,7 @@ variables:
   templateFile: '.azure/bicep/aci.bicep'
   subscriptionid: '7f62f0c4-db44-4d69-9eb0-c8f6f50718d9'
   azureserviceconnection: 'terraformteste'
-  webappname: 'az400eshop-NAME'
+  webappname: 'az400eshop-teste23'
   acr-login-server: 'crwtcmyucjic2tq.azurecr.io'
   acr-username: 'crwtcmyucjic2tq'
   resource-group: 'AZ400-EWebShop-NAME' 
