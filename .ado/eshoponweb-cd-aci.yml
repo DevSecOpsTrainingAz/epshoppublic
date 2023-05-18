@@ -3,8 +3,8 @@
 # trigger: none
 resources:
   pipelines:
-  - pipeline: eshoponweb-ci-dockercompose
-    source: eshoponweb-ci-dockercompose # given pipeline name
+  - pipeline: AplicativoWeb (KeyVault e CI DockerCompose)
+    source: AplicativoWeb (KeyVault e CI DockerCompose) # given pipeline name
     trigger: true
   repositories:
   - repository: self
