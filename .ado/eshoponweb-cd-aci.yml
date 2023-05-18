@@ -7,8 +7,8 @@ resources:
     source: eshoponweb-ci-dockercompose # given pipeline name
     trigger: true
   repositories:
-    - repository: self
-      trigger: none
+  - repository: self
+    trigger: none
 
 variables:
   location: 'eastus'
