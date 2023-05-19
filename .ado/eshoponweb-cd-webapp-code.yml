@@ -14,7 +14,7 @@ variables:
   templateFile: '.azure/bicep/webapp.bicep'
   subscriptionid: '7f62f0c4-db44-4d69-9eb0-c8f6f50718d9'
   azureserviceconnection: 'terraformteste'
-  webappname: 'az400-webapp-NAME'
+  webappname: 'az400-webapp-teste23'
   # webappname: 'webapp-windows-eshop'
   
 
