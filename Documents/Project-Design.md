@@ -18,3 +18,6 @@ Azure DevOps OAuth 2.0 Authorization Flow
   D-->>A: Respond to REST API
   A-->>U: Relay REST API response
  :::
+## 
+User Interface
+![brand.png](/.attachments/brand-ee9ffeb1-df22-48f5-89ca-d36d3b78770f.png)
