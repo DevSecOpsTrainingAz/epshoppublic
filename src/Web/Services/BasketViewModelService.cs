@@ -91,3 +91,7 @@ public class BasketViewModelService : IBasketViewModelService
         return counter;
     }
 }
+
+ public void Unused(){
+
+ }
