@@ -1,8 +1,8 @@
 name: MSDO windows-latest
 on:
   push:
-    branches:
-      - main
+    #branches:
+      # - main
 
 jobs:
   sample:

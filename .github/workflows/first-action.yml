@@ -6,3 +6,5 @@ jobs:
         steps:
             - name: Display the output of echo commands
               run: echo "This is my first workflow run."
+            - name: Display the output of ls commands
+              run: ls -l
